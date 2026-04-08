@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/agentdiagmascot.png" width="200" />
+  <img src="assets/agentdiagmascot.png" width="500" />
 </p>
 
 # agentdiag
@@ -257,7 +257,7 @@ pytest tests/ -v        # Make sure tests pass before submitting
 
 ## Authors
 
-Built by [Julian Tang](https://github.com/JulianTang2027) with [Claude Code](https://claude.ai/claude-code). Mascot by Gemini Nano Banana.
+Built by [Julian Tang](https://github.com/JulianTang2027) with the help of [Claude Code](https://claude.ai/claude-code). Mascot by Gemini Nano Banana.
 
 ## License
 
