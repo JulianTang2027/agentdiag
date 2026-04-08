@@ -1,0 +1,30 @@
+{
+  "task": "What is the weather in San Francisco today?",
+  "steps": [
+    {
+      "index": 0,
+      "type": "thought",
+      "content": "I'll use the weather tool to check San Francisco's current weather."
+    },
+    {
+      "index": 1,
+      "type": "tool_call",
+      "content": "Checking weather",
+      "tool_name": "get_weather",
+      "tool_args": {"city": "San Francisco", "unit": "fahrenheit"}
+    },
+    {
+      "index": 2,
+      "type": "observation",
+      "content": "San Francisco: 62°F, partly cloudy, humidity 72%, wind 12 mph W."
+    },
+    {
+      "index": 3,
+      "type": "result",
+      "content": "The weather in San Francisco today is 62°F and partly cloudy with 72% humidity and westerly winds at 12 mph."
+    }
+  ],
+  "outcome": "success",
+  "model": "claude-3-5-sonnet",
+  "available_tools": ["get_weather", "web_search"]
+}

@@ -1,0 +1,63 @@
+{
+  "task": "What is the population of Tokyo?",
+  "outcome": "failure",
+  "model": "gpt-4o",
+  "runs": [
+    {
+      "name": "AgentExecutor",
+      "run_type": "chain",
+      "inputs": {"input": "What is the population of Tokyo?"},
+      "outputs": null,
+      "error": null,
+      "start_time": "2025-06-01T10:00:00Z"
+    },
+    {
+      "name": "ChatOpenAI",
+      "run_type": "llm",
+      "inputs": {},
+      "outputs": {"generations": [[{"text": "I should search for Tokyo's population."}]]},
+      "error": null,
+      "start_time": "2025-06-01T10:00:01Z"
+    },
+    {
+      "name": "web_search",
+      "run_type": "tool",
+      "inputs": {"query": "Tokyo population 2025"},
+      "outputs": {"output": "Error: Search API returned 503 Service Unavailable"},
+      "error": "Search API returned 503 Service Unavailable",
+      "start_time": "2025-06-01T10:00:02Z"
+    },
+    {
+      "name": "ChatOpenAI",
+      "run_type": "llm",
+      "inputs": {},
+      "outputs": {"generations": [[{"text": "Let me try searching again."}]]},
+      "error": null,
+      "start_time": "2025-06-01T10:00:03Z"
+    },
+    {
+      "name": "web_search",
+      "run_type": "tool",
+      "inputs": {"query": "Tokyo population 2025"},
+      "outputs": {"output": "Error: Search API returned 503 Service Unavailable"},
+      "error": "Search API returned 503 Service Unavailable",
+      "start_time": "2025-06-01T10:00:04Z"
+    },
+    {
+      "name": "ChatOpenAI",
+      "run_type": "llm",
+      "inputs": {},
+      "outputs": {"generations": [[{"text": "The search is still failing. Let me try once more."}]]},
+      "error": null,
+      "start_time": "2025-06-01T10:00:05Z"
+    },
+    {
+      "name": "web_search",
+      "run_type": "tool",
+      "inputs": {"query": "Tokyo population 2025"},
+      "outputs": {"output": "Error: Search API returned 503 Service Unavailable"},
+      "error": "Search API returned 503 Service Unavailable",
+      "start_time": "2025-06-01T10:00:06Z"
+    }
+  ]
+}

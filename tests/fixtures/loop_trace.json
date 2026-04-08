@@ -1,0 +1,70 @@
+{
+  "task": "Find the cheapest flight from NYC to LAX on December 15",
+  "steps": [
+    {
+      "index": 0,
+      "type": "thought",
+      "content": "I need to search for flights from NYC to LAX on December 15."
+    },
+    {
+      "index": 1,
+      "type": "tool_call",
+      "content": "Searching for flights",
+      "tool_name": "search_flights",
+      "tool_args": {"origin": "NYC", "destination": "LAX", "date": "2025-12-15"}
+    },
+    {
+      "index": 2,
+      "type": "observation",
+      "content": "Error: API rate limit exceeded. Please try again later.",
+      "error": true
+    },
+    {
+      "index": 3,
+      "type": "tool_call",
+      "content": "Searching for flights",
+      "tool_name": "search_flights",
+      "tool_args": {"origin": "NYC", "destination": "LAX", "date": "2025-12-15"}
+    },
+    {
+      "index": 4,
+      "type": "observation",
+      "content": "Error: API rate limit exceeded. Please try again later.",
+      "error": true
+    },
+    {
+      "index": 5,
+      "type": "tool_call",
+      "content": "Searching for flights",
+      "tool_name": "search_flights",
+      "tool_args": {"origin": "NYC", "destination": "LAX", "date": "2025-12-15"}
+    },
+    {
+      "index": 6,
+      "type": "observation",
+      "content": "Error: API rate limit exceeded. Please try again later.",
+      "error": true
+    },
+    {
+      "index": 7,
+      "type": "tool_call",
+      "content": "Searching for flights",
+      "tool_name": "search_flights",
+      "tool_args": {"origin": "NYC", "destination": "LAX", "date": "2025-12-15"}
+    },
+    {
+      "index": 8,
+      "type": "observation",
+      "content": "Error: API rate limit exceeded. Please try again later.",
+      "error": true
+    },
+    {
+      "index": 9,
+      "type": "result",
+      "content": "I was unable to find flights due to repeated API errors."
+    }
+  ],
+  "outcome": "failure",
+  "model": "gpt-4o",
+  "available_tools": ["search_flights", "book_flight", "get_weather"]
+}

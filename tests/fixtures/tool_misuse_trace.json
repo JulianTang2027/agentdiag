@@ -1,0 +1,61 @@
+{
+  "task": "Summarize the latest 3 emails in my inbox",
+  "steps": [
+    {
+      "index": 0,
+      "type": "thought",
+      "content": "I need to read the user's emails. Let me use the email tool."
+    },
+    {
+      "index": 1,
+      "type": "tool_call",
+      "content": "Fetching emails",
+      "tool_name": "read_emails",
+      "tool_args": {"folder": "inbox", "limit": 3}
+    },
+    {
+      "index": 2,
+      "type": "observation",
+      "content": "Error: Tool 'read_emails' not found.",
+      "error": true
+    },
+    {
+      "index": 3,
+      "type": "thought",
+      "content": "Let me try a different tool name."
+    },
+    {
+      "index": 4,
+      "type": "tool_call",
+      "content": "Fetching emails with Gmail",
+      "tool_name": "gmail_fetch",
+      "tool_args": {"count": 3}
+    },
+    {
+      "index": 5,
+      "type": "observation",
+      "content": "Error: Tool 'gmail_fetch' not found.",
+      "error": true
+    },
+    {
+      "index": 6,
+      "type": "tool_call",
+      "content": "Trying web search instead",
+      "tool_name": "web_search",
+      "tool_args": {"query": "my latest emails"}
+    },
+    {
+      "index": 7,
+      "type": "observation",
+      "content": "Results: 10 articles about email management tips."
+    },
+    {
+      "index": 8,
+      "type": "result",
+      "content": "I found some articles about email management but could not access your actual emails."
+    }
+  ],
+  "outcome": "failure",
+  "model": "gpt-4o",
+  "available_tools": ["get_inbox", "send_email", "web_search", "calendar_list"]
+}

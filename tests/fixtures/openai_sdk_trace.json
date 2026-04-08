@@ -1,0 +1,40 @@
+{
+  "task": "Send a Slack message to #general saying hello",
+  "outcome": "failure",
+  "model": "gpt-4o",
+  "available_tools": ["send_slack_message", "list_channels", "read_messages"],
+  "steps": [
+    {
+      "type": "model_response",
+      "content": [{"text": "I need to send a message to the #general channel on Slack."}]
+    },
+    {
+      "type": "tool_call",
+      "name": "post_to_slack",
+      "arguments": {"channel": "#general", "message": "hello"}
+    },
+    {
+      "type": "tool_output",
+      "output": "Error: Tool 'post_to_slack' not found.",
+      "error": true
+    },
+    {
+      "type": "model_response",
+      "content": [{"text": "Let me try a different tool name."}]
+    },
+    {
+      "type": "tool_call",
+      "name": "slack_post",
+      "arguments": {"channel": "general", "text": "hello"}
+    },
+    {
+      "type": "tool_output",
+      "output": "Error: Tool 'slack_post' not found.",
+      "error": true
+    },
+    {
+      "type": "model_response",
+      "content": [{"text": "I'm unable to find the right tool to send a Slack message."}]
+    }
+  ]
+}
